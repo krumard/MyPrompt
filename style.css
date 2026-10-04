@@ -70,3 +70,11 @@ footer{border-top:1px solid var(--line);padding:30px 5vw 42px;color:#73839a;disp
 }
 .gas-link:hover{background:rgba(255,255,255,.1);color:#fff}
 @media(max-width:760px){.gas-link{display:none}}
+
+.learning-box{
+  margin-top:14px;border:1px solid rgba(255,211,106,.16);
+  background:linear-gradient(135deg,rgba(255,211,106,.06),rgba(74,163,255,.035));
+  border-radius:16px;padding:15px 17px
+}
+.learning-box p{margin:0;color:#b7c4d6;line-height:1.7;font-size:12px}
+.learning-box .prompt-label{color:#ffd36a}
