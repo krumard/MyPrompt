@@ -98,7 +98,7 @@ function renderChips() {
 function renderRows() {
   rows.innerHTML = "";
   const data = filtered();
-  resultCount.textContent = `พบ ${data.length} จาก ${PROMPTS.length} Prompt`;
+  resultCount.textContent = `พบ ${data.length} จาก ${PROMPTS.length} พรอมต์`;
 
   if (state.query.trim()) {
     searchResults.classList.remove("hidden");
@@ -126,7 +126,7 @@ function renderRows() {
     if (!items.length) return;
     const section = document.createElement("section");
     section.className = "prompt-row";
-    section.innerHTML = `<div class="row-title"><h3>${c.name}</h3><span>${items.length} Prompt</span></div>`;
+    section.innerHTML = `<div class="row-title"><h3>${c.name}</h3><span>${items.length} พรอมต์</span></div>`;
     const scroller = document.createElement("div"); scroller.className = "row-scroll";
     items.forEach(p => scroller.appendChild(card(p)));
     section.appendChild(scroller); rows.appendChild(section);
@@ -175,7 +175,7 @@ async function copyPrompt(p) {
   } catch(e) {
     const ta=document.createElement("textarea"); ta.value=p.prompt; document.body.appendChild(ta); ta.select(); document.execCommand("copy"); ta.remove();
   }
-  showToast("คัดลอก Prompt แล้ว ✨");
+  showToast("คัดลอกพรอมต์แล้ว ✨");
 }
 
 function showToast(msg) {
